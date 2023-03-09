@@ -1,0 +1,18 @@
+@use 'variaveis';
+
+.hero {
+    padding: 3vw 5.6vw 5.6vw;
+    min-height: 80vh;
+    background-image: linear-gradient(to bottom, transparent 0%, variaveis.$corDeFundo 100%), url("../images/twd__banner__header.jpg");
+    background-size: cover;
+    background-color: variaveis.$corDeFundo;
+
+    @media (max-width: 768px) {
+        background-image: linear-gradient(to bottom, transparent 0%, variaveis.$corDeFundo 100%), url("../images/twd__banner__header__phone.jpg");
+    }
+
+    @media (min-width: 769px) and (max-width: 1023px) {
+        background-image: linear-gradient(to bottom, transparent 0%, variaveis.$corDeFundo 100%), url("../images/twd__banner__header__tablet.jpg");
+        min-height: 95vh;
+    }
+}

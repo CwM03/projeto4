@@ -1,0 +1,40 @@
+@use 'variaveis';
+
+.store {
+    padding: 5.6vw;
+    min-height: 80vh;
+    text-align: center;
+    background-color: variaveis.$corDeFundo;
+
+    &__list {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        margin-top: 42px;
+
+        @media (max-width: 768px) {
+            grid-template-columns: 1fr;
+        }
+
+        @media (min-width: 769px) and (max-width: 1023px) {
+            grid-template-columns: 1fr 1fr;
+        }
+
+        &__item {
+            margin-bottom: 32px;
+            align-items: center;
+            
+            p {
+                padding: 12px;
+            }
+
+            img {
+                max-width: 90%;
+                border-radius: 5px;
+            }
+
+            a {
+                max-width: 50%;
+            }
+        }
+    }
+}

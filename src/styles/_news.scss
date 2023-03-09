@@ -1,0 +1,99 @@
+@use 'variaveis';
+
+.news {
+    padding: 5.6vw;
+    min-height: 80vh;
+    text-align: center;
+    background-color: variaveis.$corDeFundo;
+
+    &__table {
+        display: grid;
+        grid-template-columns: 70% 30%;
+        margin-top: 42px;
+
+        @media (max-width: 768px) {
+            display: block;
+        }
+
+        @media (min-width: 769px) and (max-width: 1023px) {
+            display: block;
+        }
+
+        &__list {
+            display: block;
+
+            &__item {
+                display: flex;
+                justify-content: left;
+                align-items: center;
+                margin-bottom: 48px;
+
+                @media (max-width: 768px) {
+                    display: block;
+                }
+
+                
+
+                img {
+                    width: 40%;
+                    cursor: pointer;
+
+                    @media (max-width: 768px) {
+                        width: 100%;
+                    }
+                }
+
+                &__content {
+                    text-align: left;
+                    width: 45%;
+                    margin-left: 24px;
+
+                    @media (max-width: 768px) {
+                        width: 100%;
+                        margin-left: 0;
+                    }
+                    
+                    a {
+                        text-decoration: none;
+                        padding-top: 8px;
+                        padding-bottom: 8px;
+                    }
+
+                    p:first-child {
+                        @media (max-width: 768px) {
+                            text-align: center;
+                        }
+                    }
+                }
+            }
+        }
+
+        &--wrap {
+            
+
+            &__list {
+                display: block;
+                justify-content: right;
+
+                &__item {
+                    margin-bottom: 48px;
+                    display: flex;
+                    text-align: left;
+                    
+                    img {
+                        width: 40%;
+                        cursor: pointer;
+                    }
+
+                    &__content {
+                        margin-left: 16px;
+
+                        a {
+                            text-decoration: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
